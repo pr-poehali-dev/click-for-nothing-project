@@ -61,6 +61,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				'game': {
+					'mustard': '#FFD23F',
+					'ketchup': '#FF6B35',
+					'green': '#2ED1A2',
+					'purple': '#9b87f5',
+					'dark': '#1A1F2C'
 				}
 			},
 			borderRadius: {
@@ -84,11 +91,28 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-click': {
+					'0%': { transform: 'scale(1)' },
+					'50%': { transform: 'scale(1.1)' },
+					'100%': { transform: 'scale(1)' }
+				},
+				'float': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-10px)' }
+				},
+				'coin-bounce': {
+					'0%': { transform: 'translateY(0) scale(1)', opacity: '1' },
+					'50%': { transform: 'translateY(-30px) scale(1.2)', opacity: '0.8' },
+					'100%': { transform: 'translateY(-60px) scale(0.8)', opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-click': 'pulse-click 0.3s ease-out',
+				'float': 'float 3s ease-in-out infinite',
+				'coin-bounce': 'coin-bounce 1s ease-out forwards'
 			}
 		}
 	},
